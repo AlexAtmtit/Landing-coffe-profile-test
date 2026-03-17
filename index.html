@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ПЯТЬ ПОНЧИКОВ и чашка кофе | Уютная Кофейня</title>
-   <script src="https://cdn.tailwindcss.com"></script>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-   <style>
-       /* Custom Fonts */
-       .font-serif { font-family: 'Playfair Display', serif; }
-       .font-sans { font-family: 'Montserrat', sans-serif; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня в центре Москвы | Спешелти кофе и свежие пончики | Два пончика и чашка кофе</title>
+    <meta name="description" content="Два пончика и чашка кофе - уютная кофейня в центре Москвы. Спешелти кофе, свежие пончики каждый день, кофе навынос, завтраки и встречи в спокойной атмосфере.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3E2723">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='48'%3E%E2%98%95%3C/text%3E%3C/svg%3E">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Кофейня в центре Москвы | Два пончика и чашка кофе">
+    <meta property="og:description" content="Спешелти кофе, свежие пончики, удобный формат навынос и пространство для встреч в центре Москвы.">
+    <meta property="og:image" content="dani-ZLqxSzvVr7I-unsplash.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
 
-        /* Custom Animations */
         @keyframes float {
-            0% { transform: translateY(0px); }
+            0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            100% { transform: translateY(0); }
         }
         .animate-float { animation: float 4s ease-in-out infinite; }
 
-        /* Hover Glow Effect */
         .hover-glow {
             transition: all 0.3s ease;
         }
@@ -29,7 +36,6 @@
             box-shadow: 0 0 20px rgba(141, 110, 99, 0.4);
         }
 
-        /* Button Shine Effect */
         .btn-shine {
             position: relative;
             overflow: hidden;
@@ -49,7 +55,6 @@
             left: 150%;
         }
 
-        /* Link Underline Animation */
         .link-underline {
             position: relative;
         }
@@ -67,65 +72,33 @@
             width: 100%;
         }
 
-        /* Card Tilt Effect */
         .card-tilt {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card-tilt:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
-        /* Icon Bounce */
-        .icon-bounce {
-            transition: transform 0.3s ease;
-        }
-        .icon-bounce:hover {
-            transform: scale(1.2);
-        }
-
-        /* Image Zoom Container */
-        .img-zoom-container {
-            overflow: hidden;
-        }
-        .img-zoom-container img {
-            transition: transform 0.5s ease;
-        }
-        .img-zoom-container:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Feature Box Hover */
         .feature-box {
             transition: all 0.3s ease;
         }
         .feature-box:hover {
-            background: rgba(141, 110, 99, 0.1);
-            border-radius: 1rem;
-            transform: scale(1.02);
+            background: rgba(141, 110, 99, 0.08);
+            border-radius: 1.5rem;
+            transform: translateY(-6px);
         }
 
-        /* Contact Card Hover */
         .contact-item {
             transition: all 0.3s ease;
         }
         .contact-item:hover {
-            transform: translateX(10px);
+            transform: translateX(8px);
         }
         .contact-item:hover svg {
             color: #B89A5A;
         }
 
-        /* Footer Link Hover */
-        .footer-link {
-            transition: all 0.3s ease;
-        }
-        .footer-link:hover {
-            color: white;
-            padding-left: 5px;
-        }
-
-        /* Social Icon Hover */
         .social-icon {
             transition: all 0.3s ease;
         }
@@ -134,437 +107,550 @@
             background: #B89A5A;
         }
 
-       @keyframes steam {
-           0% { transform: translateY(0) scale(1); opacity: 0.8; }
-           50% { transform: translateY(-20px) scale(1.5); opacity: 0.4; }
-           100% { transform: translateY(-40px) scale(2); opacity: 0; }
-       }
-       .steam-particle {
-           position: absolute;
-           background: rgba(255, 255, 255, 0.6);
-           border-radius: 50%;
-           filter: blur(8px);
-           animation: steam 3s infinite linear;
-       }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-       /* Scroll Reveal Classes */
-       .reveal {
-           opacity: 0;
-           transform: translateY(30px);
-           transition: all 0.8s ease-out;
-       }
-       .reveal.active {
-           opacity: 1;
-           transform: translateY(0);
-       }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
 
-       /* Custom Scrollbar */
-       ::-webkit-scrollbar {
-           width: 10px;
-       }
-       ::-webkit-scrollbar-track {
-           background: #FDFBF7;
-       }
-       ::-webkit-scrollbar-thumb {
-           background: #8D6E63;
-           border-radius: 5px;
-       }
-       ::-webkit-scrollbar-thumb:hover {
-           background: #5D4037;
-       }
-   </style>
-   <script>
-       tailwind.config = {
-           theme: {
-               extend: {
-                   colors: {
-                       coffee: {
-                           50: '#FDFBF7', // Cream background
-                           100: '#F5F0E6',
-                           200: '#E6DCC3',
-                           300: '#D7C6A0',
-                           400: '#C8B07D',
-                           500: '#B89A5A',
-                           600: '#A08040',
-                           700: '#8D6E63', // Latte
-                           800: '#5D4037', // Espresso
-                           900: '#3E2723', // Dark Roast
-                       }
-                   }
-               }
-           }
-       }
-   </script>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8D6E63;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5D4037;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            50: '#FDFBF7',
+                            100: '#F5F0E6',
+                            200: '#E6DCC3',
+                            300: '#D7C6A0',
+                            400: '#C8B07D',
+                            500: '#B89A5A',
+                            600: '#A08040',
+                            700: '#8D6E63',
+                            800: '#5D4037',
+                            900: '#3E2723'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CafeOrCoffeeShop",
+            "name": "Два пончика и чашка кофе",
+            "description": "Кофейня в центре Москвы со спешелти кофе, свежими пончиками и удобным форматом навынос.",
+            "servesCuisine": ["Coffee", "Desserts", "Breakfast"],
+            "priceRange": "₽₽",
+            "telephone": "+7 (495) 123-45-67",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ул. Большая Конюшенная, 12",
+                "addressLocality": "Москва",
+                "addressCountry": "RU"
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "07:00",
+                    "closes": "22:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Saturday", "Sunday"],
+                    "opens": "08:00",
+                    "closes": "23:00"
+                }
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Есть ли кофе навынос утром?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да. Утром у нас можно быстро взять эспрессо, американо, капучино и свежий пончик с собой."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Можно ли прийти на встречу или поработать с ноутбуком?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да. В кофейне спокойная атмосфера, удобные столики и формат, подходящий для коротких встреч и неспешной работы."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Пончики готовятся каждый день?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да. Мы делаем свежую выпечку ежедневно и поддерживаем витрину в течение дня."
+                    }
+                }
+            ]
+        }
+    </script>
 </head>
-<body class="font-sans text-coffee-900 bg-coffee-50 antialiased selection:bg-coffee-200 selection:text-coffee-900">
-
-   <!-- Navigation -->
-   <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer hover-glow rounded-full px-2 -mx-2 py-1 transition-all" onclick="window.scrollTo(0,0)">
+<body class="font-sans bg-coffee-50 text-coffee-900 antialiased selection:bg-coffee-200 selection:text-coffee-900">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4" aria-label="Основная навигация">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <button class="flex-shrink-0 flex items-center cursor-pointer hover-glow rounded-full px-2 -mx-2 py-1 transition-all text-left" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Наверх">
                     <span class="font-serif text-2xl font-bold text-coffee-900 tracking-wide">
-                        Два пончика <span class="text-coffee-600">&</span> Чашка кофе
+                        Два пончика <span class="text-coffee-600">&</span> чашка кофе
                     </span>
-                </div>
+                </button>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-coffee-800 hover:text-coffee-600 font-medium transition-colors duration-300 link-underline">О нас</a>
+                    <a href="#story" class="text-coffee-800 hover:text-coffee-600 font-medium transition-colors duration-300 link-underline">О кофейне</a>
                     <a href="#menu" class="text-coffee-800 hover:text-coffee-600 font-medium transition-colors duration-300 link-underline">Меню</a>
+                    <a href="#faq" class="text-coffee-800 hover:text-coffee-600 font-medium transition-colors duration-300 link-underline">FAQ</a>
                     <a href="#contact" class="text-coffee-800 hover:text-coffee-600 font-medium transition-colors duration-300 link-underline">Контакты</a>
-                    <a href="#contact" class="bg-coffee-800 text-white px-6 py-2 rounded-full hover:bg-coffee-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 btn-shine hover-glow">
-                        Забронировать
+                    <a href="tel:+74951234567" class="bg-coffee-800 text-white px-6 py-2 rounded-full hover:bg-coffee-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 btn-shine hover-glow">
+                        Позвонить
                     </a>
                 </div>
 
-               <!-- Mobile Menu Button -->
-               <div class="md:hidden flex items-center">
-                   <button id="mobile-menu-btn" class="text-coffee-900 hover:text-coffee-600 focus:outline-none">
-                       <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                       </svg>
-                   </button>
-               </div>
-           </div>
-       </div>
-
-       <!-- Mobile Menu Panel -->
-       <div id="mobile-menu" class="hidden md:hidden bg-coffee-50 absolute w-full shadow-xl border-t border-coffee-200">
-           <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-               <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-900 hover:bg-coffee-200">О нас</a>
-               <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-900 hover:bg-coffee-200">Меню</a>
-               <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-900 hover:bg-coffee-200">Контакты</a>
-           </div>
-       </div>
-   </nav>
-
-   <!-- Hero Section -->
-   <header class="relative h-screen flex items-center justify-center overflow-hidden">
-       <!-- Background Image with Overlay -->
-       <div class="absolute inset-0 z-0">
-           <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Coffee Background" class="w-full h-full object-cover">
-           <div class="absolute inset-0 bg-gradient-to-b from-coffee-900/60 via-coffee-900/40 to-coffee-50"></div>
-       </div>
-
-       <!-- Content -->
-       <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-           <div class="inline-block mb-4 animate-float">
-               <svg class="w-16 h-16 text-coffee-200 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                   <path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7v-1h.5c1.93 0 3.5-1.57 3.5-3.5S20.43 3 18.5 3zM16 8.99c0 2.2-1.8 3.99-3.99 3.99-2.2 0-4-1.8-4-4V5h8v3.99zm2.5-1.99h-1v-2h1c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5zM4 19h16v2H4v-2z"/>
-               </svg>
-           </div>
-           <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg leading-tight">
-               Два пончика <br> <span class="text-coffee-200 italic">&</span> Чашка кофе
-           </h1>
-           <p class="text-xl md:text-2xl text-coffee-100 mb-10 font-light max-w-2xl mx-auto">
-               Где каждый глоток — это история, а каждый пончик — произведение искусства.
-           </p>
-           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#menu" class="bg-coffee-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-coffee-400 transition-all duration-300 shadow-lg hover:shadow-coffee-500/50 transform hover:-translate-y-1 btn-shine hover-glow">
-                    Смотреть меню
-                </a>
-                <a href="#contact" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-coffee-900 transition-all duration-300 btn-shine hover-glow">
-                    Найти нас
-                </a>
-           </div>
-       </div>
-
-       <!-- Scroll Down Indicator -->
-       <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-           <a href="#about" class="text-coffee-800 hover:text-coffee-600 transition-colors">
-               <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-               </svg>
-           </a>
-       </div>
-   </header>
-
-   <!-- About Section -->
-   <section id="about" class="py-24 bg-coffee-50 relative overflow-hidden">
-       <!-- Decorative Elements -->
-       <div class="absolute top-0 left-0 w-64 h-64 bg-coffee-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
-       <div class="absolute bottom-0 right-0 w-96 h-96 bg-coffee-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
-
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-           <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-               <!-- Image Grid -->
-               <div class="relative reveal">
-                   <div class="grid grid-cols-2 gap-4">
-                       <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-xl w-full h-64 object-cover transform translate-y-8 hover:scale-105 transition-transform duration-500" alt="Interior">
-                       <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-xl w-full h-64 object-cover hover:scale-105 transition-transform duration-500" alt="Coffee Art">
-                   </div>
-                   <!-- Floating Badge -->
-                   <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-full shadow-2xl border-4 border-coffee-100 z-20 animate-float" style="animation-delay: 1s;">
-                       <div class="text-center">
-                           <span class="block font-serif text-3xl font-bold text-coffee-800">5+</span>
-                           <span class="text-xs text-coffee-600 uppercase tracking-wider">Лет опыта</span>
-                       </div>
-                   </div>
-               </div>
-
-               <!-- Text Content -->
-               <div class="reveal">
-                   <h4 class="text-coffee-600 font-bold tracking-widest uppercase mb-2">Наша История</h4>
-                   <h2 class="font-serif text-4xl md:text-5xl font-bold text-coffee-900 mb-6">Уют, созданный с любовью</h2>
-                    <p class="text-coffee-700 text-lg leading-relaxed mb-6">
-                        «Два пончика и чашка кофе» — уютное место, где время течет медленнее, а ароматы свежемолотого кофе и теплых пончиков дарят тепло и уют.
-                    </p>
-                    <p class="text-coffee-700 text-lg leading-relaxed mb-8">
-                        С 2018 года мы создаем пространство для душевных встреч и маленьких радостей. Наши бариста творят чудеса с кофе, а пекари мастерят пончики вручную из натуральных ингредиентов.
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full border-2 border-coffee-400 icon-bounce" alt="Owner">
-                        <div>
-                            <p class="font-bold text-coffee-900">Анна Петрова</p>
-                            <p class="text-sm text-coffee-600">Основательница и шеф-пекарь</p>
-                        </div>
-                    </div>
-               </div>
-           </div>
-       </div>
-   </section>
-
-   <!-- Menu Preview Section -->
-   <section id="menu" class="py-24 bg-white">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="text-center mb-16 reveal">
-               <h4 class="text-coffee-600 font-bold tracking-widest uppercase mb-2">Избранное</h4>
-               <h2 class="font-serif text-4xl md:text-5xl font-bold text-coffee-900">Наши Хиты</h2>
-               <div class="w-24 h-1 bg-coffee-500 mx-auto mt-4 rounded-full"></div>
-           </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                
-                <!-- Item 1: Espresso Tonic -->
-                <div class="group relative bg-coffee-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal card-tilt">
-                    <div class="h-64 overflow-hidden relative img-zoom-container">
-                       <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10"></div>
-                       <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Espresso Tonic" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                       <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-coffee-900 font-bold z-20 shadow-sm">
-                           320 ₽
-                       </div>
-                   </div>
-                   <div class="p-8 relative">
-                       <!-- Steam Effect -->
-                       <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                           <div class="steam-particle w-4 h-4" style="animation-delay: 0s;"></div>
-                           <div class="steam-particle w-3 h-3 ml-2" style="animation-delay: 0.5s;"></div>
-                           <div class="steam-particle w-5 h-5 ml-1" style="animation-delay: 1s;"></div>
-                       </div>
-
-                       <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-2">Эспрессо Тоник</h3>
-                       <p class="text-coffee-600 mb-4">Двойной эспрессо, тоник, лед и лайм. Идеальный баланс горечи и цитрусовой свежести.</p>
-                        <button class="text-coffee-800 font-bold uppercase text-sm tracking-wider border-b-2 border-coffee-300 hover:border-coffee-800 transition-colors pb-1 hover-glow rounded px-2 -mx-2">Заказать сейчас</button>
-                    </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-coffee-900 hover:text-coffee-600 focus:outline-none" aria-label="Открыть меню">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
-
-                <!-- Item 2: Caramel Latte -->
-                <div class="group relative bg-coffee-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal card-tilt" style="transition-delay: 100ms;">
-                    <div class="h-64 overflow-hidden relative img-zoom-container">
-                       <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10"></div>
-                       <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Caramel Latte" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                       <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-coffee-900 font-bold z-20 shadow-sm">
-                           290 ₽
-                       </div>
-                   </div>
-                   <div class="p-8 relative">
-                        <!-- Steam Effect -->
-                        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-full flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                           <div class="steam-particle w-4 h-4" style="animation-delay: 0.2s;"></div>
-                           <div class="steam-particle w-3 h-3 ml-2" style="animation-delay: 0.7s;"></div>
-                       </div>
-                       <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-2">Карамельный Латте</h3>
-                       <p class="text-coffee-600 mb-4">Нежный латте с домашней соленой карамелью и взбитыми сливками.</p>
-                        <button class="text-coffee-800 font-bold uppercase text-sm tracking-wider border-b-2 border-coffee-300 hover:border-coffee-800 transition-colors pb-1 hover-glow rounded px-2 -mx-2">Заказать сейчас</button>
-                    </div>
-                </div>
-
-                <!-- Item 3: Donut Combo -->
-                <div class="group relative bg-coffee-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal card-tilt" style="transition-delay: 200ms;">
-                    <div class="h-64 overflow-hidden relative img-zoom-container">
-                       <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10"></div>
-                        <img src="will-thomas-gkNkHvHHC_I-unsplash.jpg" alt="Donuts" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                       <div class="absolute top-4 right-4 bg-coffee-800 text-white px-3 py-1 rounded-full font-bold z-20 shadow-sm text-xs">
-                           ХИТ
-                       </div>
-                       <div class="absolute top-4 right-16 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-coffee-900 font-bold z-20 shadow-sm">
-                           450 ₽
-                       </div>
-                   </div>
-                   <div class="p-8">
-                       <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-2">Сет «Два Пончика»</h3>
-                       <p class="text-coffee-600 mb-4">Выберите любые два пончика из нашей витрины + американо в подарок.</p>
-                        <button class="text-coffee-800 font-bold uppercase text-sm tracking-wider border-b-2 border-coffee-300 hover:border-coffee-800 transition-colors pb-1 hover-glow rounded px-2 -mx-2">Заказать сейчас</button>
-                    </div>
-                </div>
-
             </div>
-           
-           <div class="text-center mt-12 reveal">
-                <a href="#" class="inline-block border-2 border-coffee-800 text-coffee-800 px-8 py-3 rounded-full font-semibold hover:bg-coffee-800 hover:text-white transition-all duration-300 btn-shine hover-glow">
-                    Посмотреть полное меню
-                </a>
-           </div>
-       </div>
-   </section>
+        </div>
 
-   <!-- Features/Stats Section -->
-   <section class="py-20 bg-coffee-800 text-coffee-50">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="reveal feature-box p-4">
-                    <div class="text-4xl mb-2 icon-bounce">☕</div>
-                    <div class="font-serif text-3xl font-bold mb-1">12</div>
-                    <div class="text-coffee-300 text-sm uppercase tracking-wider">Сортов кофе</div>
-                </div>
-                <div class="reveal feature-box p-4" style="transition-delay: 100ms;">
-                    <div class="text-4xl mb-2 icon-bounce">🍩</div>
-                    <div class="font-serif text-3xl font-bold mb-1">24</div>
-                    <div class="text-coffee-300 text-sm uppercase tracking-wider">Вида пончиков</div>
-                </div>
-                <div class="reveal feature-box p-4" style="transition-delay: 200ms;">
-                    <div class="text-4xl mb-2 icon-bounce">⏰</div>
-                    <div class="font-serif text-3xl font-bold mb-1">7:00</div>
-                    <div class="text-coffee-300 text-sm uppercase tracking-wider">Открываемся</div>
-                </div>
-                <div class="reveal feature-box p-4" style="transition-delay: 300ms;">
-                    <div class="text-4xl mb-2 icon-bounce">❤️</div>
-                    <div class="font-serif text-3xl font-bold mb-1">100%</div>
-                    <div class="text-coffee-300 text-sm uppercase tracking-wider">Любовь</div>
-                </div>
-           </div>
-       </div>
-   </section>
+        <div id="mobile-menu" class="hidden md:hidden bg-coffee-50 absolute w-full shadow-xl border-t border-coffee-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#story" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-900 hover:bg-coffee-200">О кофейне</a>
+                <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-900 hover:bg-coffee-200">Меню</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-900 hover:bg-coffee-200">FAQ</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-900 hover:bg-coffee-200">Контакты</a>
+                <a href="tel:+74951234567" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-coffee-800 hover:bg-coffee-700">Позвонить</a>
+            </div>
+        </div>
+    </nav>
 
-   <!-- Contact Section -->
-   <section id="contact" class="py-24 bg-coffee-100">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row reveal">
-               
-               <!-- Contact Info -->
-               <div class="md:w-1/2 p-12 bg-coffee-900 text-white relative overflow-hidden">
-                   <div class="absolute top-0 right-0 w-40 h-40 bg-coffee-800 rounded-full mix-blend-overlay filter blur-2xl opacity-50 translate-x-10 -translate-y-10"></div>
-                   
-                   <h3 class="font-serif text-3xl font-bold mb-8 relative z-10">Приходите в гости!</h3>
-                   
-                    <div class="space-y-6 relative z-10">
-                        <div class="flex items-start contact-item">
-                            <svg class="w-6 h-6 text-coffee-400 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <div>
-                                <p class="font-bold text-lg">Адрес</p>
-                                <p class="text-coffee-200">г. Москва, ул. Большая Конюшенная, 12</p>
-                            </div>
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="dani-ZLqxSzvVr7I-unsplash.jpg" alt="Бариста готовит кофе в кофейне" class="w-full h-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-b from-coffee-900/80 via-coffee-900/55 to-coffee-50"></div>
+        </div>
+
+        <div class="relative z-10 px-4 max-w-6xl mx-auto mt-20">
+            <div class="max-w-4xl text-center mx-auto">
+                <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-coffee-100 backdrop-blur-sm mb-6 reveal">
+                    Кофейня в центре Москвы для завтрака, встреч и кофе навынос
+                </div>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg leading-tight reveal">
+                    Спешелти кофе и свежие пончики в кофейне, куда хочется возвращаться
+                </h1>
+                <p class="text-xl md:text-2xl text-coffee-100 mb-10 font-light max-w-3xl mx-auto reveal">
+                    «Два пончика и чашка кофе» - место для тех, кто ищет вкусный кофе с собой утром, спокойную встречу днем и понятное меню без случайных решений.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
+                    <a href="#menu" class="bg-coffee-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-coffee-400 transition-all duration-300 shadow-lg hover:shadow-coffee-500/50 transform hover:-translate-y-1 btn-shine hover-glow">
+                        Посмотреть меню
+                    </a>
+                    <a href="https://maps.google.com/?q=Москва,+ул.+Большая+Конюшенная,+12" target="_blank" rel="noopener noreferrer" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-coffee-900 transition-all duration-300 btn-shine hover-glow">
+                        Построить маршрут
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 reveal">
+                <div class="rounded-3xl border border-white/15 bg-white/10 p-6 text-left text-coffee-50 backdrop-blur-sm">
+                    <p class="text-sm uppercase tracking-[0.24em] text-coffee-200 mb-3">Для утра</p>
+                    <p class="text-lg font-semibold">Быстрый кофе навынос без компромиссов во вкусе.</p>
+                </div>
+                <div class="rounded-3xl border border-white/15 bg-white/10 p-6 text-left text-coffee-50 backdrop-blur-sm">
+                    <p class="text-sm uppercase tracking-[0.24em] text-coffee-200 mb-3">Для паузы</p>
+                    <p class="text-lg font-semibold">Пончики и десерты, которые не выглядят как случайное дополнение к напитку.</p>
+                </div>
+                <div class="rounded-3xl border border-white/15 bg-white/10 p-6 text-left text-coffee-50 backdrop-blur-sm">
+                    <p class="text-sm uppercase tracking-[0.24em] text-coffee-200 mb-3">Для встреч</p>
+                    <p class="text-lg font-semibold">Спокойная атмосфера для разговоров, короткой работы и неспешного завтрака.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#advantages" class="text-coffee-100 hover:text-white transition-colors" aria-label="Прокрутить к преимуществам">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="advantages" class="py-24 bg-white relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-coffee-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-coffee-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl mb-14 reveal">
+                    <p class="text-coffee-600 font-bold tracking-[0.24em] uppercase mb-3">Почему выбирают нас</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-coffee-900 mb-5">Кофейня в центре Москвы, куда удобно зайти и утром, и днем</h2>
+                    <p class="text-coffee-700 text-lg leading-relaxed">
+                        Мы сделали меню и пространство понятными для реальной жизни: забежать за кофе навынос, встретиться с другом, спокойно позавтракать или взять десерт к любимому напитку.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                    <article class="feature-box bg-coffee-50 border border-coffee-100 rounded-3xl p-8 shadow-sm reveal">
+                        <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-4">Кофе</p>
+                        <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-3">Спешелти вкус на каждый день</h3>
+                        <p class="text-coffee-700 leading-relaxed">Эспрессо, молочная классика и сезонные напитки собраны так, чтобы вы быстро находили свой вариант без перегруженного меню.</p>
+                    </article>
+                    <article class="feature-box bg-coffee-50 border border-coffee-100 rounded-3xl p-8 shadow-sm reveal" style="transition-delay: 100ms;">
+                        <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-4">Пончики</p>
+                        <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-3">Свежая выпечка каждый день</h3>
+                        <p class="text-coffee-700 leading-relaxed">Фирменные пончики не играют роль случайного десерта - это полноценная часть меню, ради которой гости возвращаются снова.</p>
+                    </article>
+                    <article class="feature-box bg-coffee-50 border border-coffee-100 rounded-3xl p-8 shadow-sm reveal" style="transition-delay: 200ms;">
+                        <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-4">Ритм города</p>
+                        <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-3">Удобно взять с собой</h3>
+                        <p class="text-coffee-700 leading-relaxed">Если времени мало, можно быстро забрать напиток и десерт навынос. Если хочется паузы, остается место для спокойной посадки внутри.</p>
+                    </article>
+                    <article class="feature-box bg-coffee-50 border border-coffee-100 rounded-3xl p-8 shadow-sm reveal" style="transition-delay: 300ms;">
+                        <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-4">Атмосфера</p>
+                        <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-3">Подходит для встреч и завтрака</h3>
+                        <p class="text-coffee-700 leading-relaxed">Уютный зал, понятное меню и спокойный темп делают кофейню удобной и для коротких разговоров, и для неспешного начала дня.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="story" class="py-24 bg-coffee-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="relative reveal">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Интерьер уютной кофейни" class="rounded-2xl shadow-xl w-full h-64 object-cover transform translate-y-8 hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="will-thomas-gkNkHvHHC_I-unsplash.jpg" alt="Свежие пончики на витрине кофейни" class="rounded-2xl shadow-xl w-full h-64 object-cover hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                         </div>
-
-                        <div class="flex items-start contact-item">
-                            <svg class="w-6 h-6 text-coffee-400 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <div>
-                                <p class="font-bold text-lg">Часы работы</p>
-                                <p class="text-coffee-200">Пн-Пт: 07:00 - 22:00</p>
-                                <p class="text-coffee-200">Сб-Вс: 08:00 - 23:00</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start contact-item">
-                            <svg class="w-6 h-6 text-coffee-400 mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            <div>
-                                <p class="font-bold text-lg">Телефон</p>
-                                <p class="text-coffee-200">+7 (495) 123-45-67</p>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-full shadow-2xl border-4 border-coffee-100 z-20 animate-float">
+                            <div class="text-center">
+                                <span class="block font-serif text-3xl font-bold text-coffee-800">С 2018</span>
+                                <span class="text-xs text-coffee-600 uppercase tracking-wider">варим и печем ежедневно</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-12 flex space-x-4 relative z-10">
-                        <a href="#" class="w-10 h-10 rounded-full bg-coffee-800 flex items-center justify-center hover:bg-coffee-700 transition-colors social-icon">
-                            <span class="sr-only">Instagram</span>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-coffee-800 flex items-center justify-center hover:bg-coffee-700 transition-colors social-icon">
-                            <span class="sr-only">Facebook</span>
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <div class="reveal">
+                        <p class="text-coffee-600 font-bold tracking-[0.24em] uppercase mb-2">О кофейне</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-coffee-900 mb-6">Локальная кофейня, которая говорит с гостем понятным языком</h2>
+                        <p class="text-coffee-700 text-lg leading-relaxed mb-6">
+                            «Два пончика и чашка кофе» - это кофейня для тех, кто ценит хороший вкус без лишней сложности. Мы варим кофе на каждый день, печем пончики небольшими партиями и держим меню таким, чтобы выбирать было легко.
+                        </p>
+                        <p class="text-coffee-700 text-lg leading-relaxed mb-8">
+                            К нам заходят за быстрым кофе навынос утром, за десертом в середине дня и за спокойной встречей вечером. Если вы ищете кофейню в центре Москвы, где приятно и взять напиток с собой, и остаться на полчаса, вам сюда.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-coffee-800">
+                            <div class="rounded-2xl bg-white border border-coffee-100 px-5 py-4 shadow-sm">Классика и сезонные напитки без перегруженного выбора</div>
+                            <div class="rounded-2xl bg-white border border-coffee-100 px-5 py-4 shadow-sm">Свежие пончики и десерты на витрине каждый день</div>
+                            <div class="rounded-2xl bg-white border border-coffee-100 px-5 py-4 shadow-sm">Удобный формат навынос для утреннего маршрута</div>
+                            <div class="rounded-2xl bg-white border border-coffee-100 px-5 py-4 shadow-sm">Комфортное пространство для встреч и короткой работы</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl text-center mx-auto mb-16 reveal">
+                    <p class="text-coffee-600 font-bold tracking-[0.24em] uppercase mb-2">Меню</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-coffee-900">Напитки и пончики, ради которых приходят повторно</h2>
+                    <p class="text-coffee-700 text-lg leading-relaxed mt-5">
+                        Вместо абстрактного «наши хиты» здесь появились более конкретные карточки, которые продают вкус, сценарий употребления и ценность каждого предложения.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <article class="group relative bg-coffee-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal card-tilt">
+                        <div class="h-64 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Эспрессо-тоник со льдом и лаймом" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-coffee-900 font-bold z-20 shadow-sm">
+                                320 ₽
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-3">Для бодрого старта</p>
+                            <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-3">Эспрессо-тоник</h3>
+                            <p class="text-coffee-600 mb-6">Двойной эспрессо, тоник, лед и лайм. Идеальный выбор для тех, кто любит яркий вкус и хочет освежиться в дороге или перед встречей.</p>
+                            <a href="#contact" class="text-coffee-800 font-bold uppercase text-sm tracking-wider border-b-2 border-coffee-300 hover:border-coffee-800 transition-colors pb-1">Уточнить наличие</a>
+                        </div>
+                    </article>
+
+                    <article class="group relative bg-coffee-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal card-tilt" style="transition-delay: 100ms;">
+                        <div class="h-64 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Карамельный латте в стеклянном бокале" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-coffee-900 font-bold z-20 shadow-sm">
+                                290 ₽
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-3">Для длинной паузы</p>
+                            <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-3">Карамельный латте</h3>
+                            <p class="text-coffee-600 mb-6">Мягкий латте с домашней соленой карамелью. Хорошо работает как десертный напиток, когда хочется остаться подольше и не торопиться.</p>
+                            <a href="#contact" class="text-coffee-800 font-bold uppercase text-sm tracking-wider border-b-2 border-coffee-300 hover:border-coffee-800 transition-colors pb-1">Позвонить в кофейню</a>
+                        </div>
+                    </article>
+
+                    <article class="group relative bg-coffee-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 reveal card-tilt" style="transition-delay: 200ms;">
+                        <div class="h-64 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10"></div>
+                            <img src="will-thomas-gkNkHvHHC_I-unsplash.jpg" alt="Фирменный сет с пончиками и кофе" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" decoding="async">
+                            <div class="absolute top-4 right-4 bg-coffee-800 text-white px-3 py-1 rounded-full font-bold z-20 shadow-sm text-xs">
+                                ХИТ
+                            </div>
+                            <div class="absolute top-4 right-16 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-coffee-900 font-bold z-20 shadow-sm">
+                                450 ₽
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-3">Для первого визита</p>
+                            <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-3">Сет «Два пончика»</h3>
+                            <p class="text-coffee-600 mb-6">Два пончика на выбор и американо в комплекте. Понятное предложение для тех, кто хочет быстро познакомиться с меню и не тратить время на выбор.</p>
+                            <a href="tel:+74951234567" class="text-coffee-800 font-bold uppercase text-sm tracking-wider border-b-2 border-coffee-300 hover:border-coffee-800 transition-colors pb-1">Забронировать по телефону</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="mt-14 reveal">
+                    <div class="rounded-[2rem] bg-coffee-900 text-coffee-50 p-8 md:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                        <div class="max-w-2xl">
+                            <p class="text-sm uppercase tracking-[0.24em] text-coffee-300 mb-3">Не знаете, что выбрать</p>
+                            <h3 class="font-serif text-3xl font-bold mb-3">Начните с фирменного сета и любимого напитка</h3>
+                            <p class="text-coffee-200 leading-relaxed">Если вы у нас впервые, берите сет с пончиками и добавляйте кофе под настроение: бодрый эспрессо-тоник, мягкий латте или классику навынос.</p>
+                        </div>
+                        <a href="https://maps.google.com/?q=Москва,+ул.+Большая+Конюшенная,+12" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-coffee-500 px-8 py-4 font-semibold text-white hover:bg-coffee-400 transition-colors btn-shine hover-glow whitespace-nowrap">
+                            Построить маршрут
                         </a>
                     </div>
-               </div>
+                </div>
+            </div>
+        </section>
 
-               <!-- Map Placeholder / Image -->
-               <div class="md:w-1/2 relative min-h-[400px]">
-                   <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Cafe Interior Map View" class="absolute inset-0 w-full h-full object-cover">
-                   <div class="absolute inset-0 bg-coffee-900/20"></div>
-                   <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <a href="https://maps.google.com" target="_blank" class="bg-white text-coffee-900 px-6 py-3 rounded-full font-bold shadow-xl hover:bg-coffee-100 transition-colors flex items-center gap-2 btn-shine hover-glow">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0121 18.382V7.618a1 1 0 01-.553-.894L15 7m0 13V7"></path></svg>
-                            Открыть в Картах
-                        </a>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
+        <section id="faq" class="py-24 bg-coffee-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14 reveal">
+                    <p class="text-coffee-600 font-bold tracking-[0.24em] uppercase mb-2">FAQ</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-coffee-900">Частые вопросы перед первым визитом</h2>
+                    <p class="text-coffee-700 text-lg leading-relaxed mt-5 max-w-3xl mx-auto">
+                        Здесь собрали то, что обычно спрашивают перед тем, как зайти на кофе, встретиться в центре города или взять напиток и десерт с собой.
+                    </p>
+                </div>
 
-   <!-- Footer -->
-   <footer class="bg-coffee-900 text-coffee-200 py-12 border-t border-coffee-800">
-       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="font-serif text-2xl font-bold text-white tracking-wide hover-glow rounded px-2 -mx-2 py-1 inline-block transition-all cursor-pointer">
-                    Два пончика <span class="text-coffee-500">&</span> Чашка кофе
+                <div class="space-y-4">
+                    <details class="group rounded-3xl border border-coffee-200 bg-white p-6 shadow-sm reveal" open>
+                        <summary class="flex cursor-pointer items-center justify-between gap-6">
+                            <span class="font-serif text-2xl font-bold text-coffee-900">Есть ли кофе навынос утром?</span>
+                            <span class="text-3xl leading-none text-coffee-500 transition-transform duration-300 group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-coffee-700 leading-relaxed">Да. В тексте это теперь подчеркнуто как отдельный сценарий: зайти по пути на работу, быстро взять напиток и не потерять в качестве.</p>
+                    </details>
+
+                    <details class="group rounded-3xl border border-coffee-200 bg-white p-6 shadow-sm reveal">
+                        <summary class="flex cursor-pointer items-center justify-between gap-6">
+                            <span class="font-serif text-2xl font-bold text-coffee-900">Можно ли прийти на встречу или поработать с ноутбуком?</span>
+                            <span class="text-3xl leading-none text-coffee-500 transition-transform duration-300 group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-coffee-700 leading-relaxed">Да. У нас комфортно и для короткой встречи, и для спокойного часа с ноутбуком, когда хочется поработать в тихой кофейне в центре Москвы.</p>
+                    </details>
+
+                    <details class="group rounded-3xl border border-coffee-200 bg-white p-6 shadow-sm reveal">
+                        <summary class="flex cursor-pointer items-center justify-between gap-6">
+                            <span class="font-serif text-2xl font-bold text-coffee-900">Есть ли у вас десерты и предложения на первый визит?</span>
+                            <span class="text-3xl leading-none text-coffee-500 transition-transform duration-300 group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-coffee-700 leading-relaxed">Да. Если не хочется долго выбирать, начните с фирменного сета «Два пончика» и напитка из классической или сезонной карты.</p>
+                    </details>
+
+                    <details class="group rounded-3xl border border-coffee-200 bg-white p-6 shadow-sm reveal">
+                        <summary class="flex cursor-pointer items-center justify-between gap-6">
+                            <span class="font-serif text-2xl font-bold text-coffee-900">Когда лучше приходить за самой свежей выпечкой?</span>
+                            <span class="text-3xl leading-none text-coffee-500 transition-transform duration-300 group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-coffee-700 leading-relaxed">Свежие партии появляются ежедневно, поэтому утром и в первой половине дня выбор обычно самый широкий. Если хотите уточнить наличие, можно просто позвонить.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-coffee-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row reveal">
+                    <div class="md:w-1/2 p-12 bg-coffee-900 text-white relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-coffee-800 rounded-full mix-blend-overlay filter blur-2xl opacity-50 translate-x-10 -translate-y-10"></div>
+
+                        <p class="text-sm uppercase tracking-[0.24em] text-coffee-300 mb-3 relative z-10">Контакты</p>
+                        <h2 class="font-serif text-3xl font-bold mb-6 relative z-10">Заходите сегодня на кофе, пончики и спокойную паузу в центре города</h2>
+                        <p class="text-coffee-200 leading-relaxed mb-8 relative z-10">
+                            Мы рядом с вашим маршрутом на работу, встречу или прогулку. Позвоните, чтобы уточнить меню, или сразу откройте маршрут и заходите в удобное для вас время.
+                        </p>
+
+                        <address class="not-italic space-y-6 relative z-10">
+                            <div class="flex items-start contact-item">
+                                <svg class="w-6 h-6 text-coffee-400 mt-1 mr-4 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-bold text-lg">Адрес</p>
+                                    <p class="text-coffee-200">г. Москва, ул. Большая Конюшенная, 12</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start contact-item">
+                                <svg class="w-6 h-6 text-coffee-400 mt-1 mr-4 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-bold text-lg">Часы работы</p>
+                                    <p class="text-coffee-200">Пн-Пт: 07:00 - 22:00</p>
+                                    <p class="text-coffee-200">Сб-Вс: 08:00 - 23:00</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start contact-item">
+                                <svg class="w-6 h-6 text-coffee-400 mt-1 mr-4 flex-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <div>
+                                    <p class="font-bold text-lg">Телефон</p>
+                                    <a href="tel:+74951234567" class="text-coffee-200 hover:text-white transition-colors">+7 (495) 123-45-67</a>
+                                </div>
+                            </div>
+                        </address>
+
+                        <div class="mt-10 flex flex-wrap gap-4 relative z-10">
+                            <a href="tel:+74951234567" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-coffee-900 hover:bg-coffee-100 transition-colors btn-shine hover-glow">
+                                Позвонить
+                            </a>
+                            <a href="https://maps.google.com/?q=Москва,+ул.+Большая+Конюшенная,+12" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 font-semibold text-white hover:bg-white hover:text-coffee-900 transition-colors">
+                                Открыть в картах
+                            </a>
+                        </div>
+
+                        <div class="mt-12 flex space-x-4 relative z-10">
+                            <a href="#" class="w-10 h-10 rounded-full bg-coffee-800 flex items-center justify-center hover:bg-coffee-700 transition-colors social-icon" aria-label="Instagram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-coffee-800 flex items-center justify-center hover:bg-coffee-700 transition-colors social-icon" aria-label="Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/2 relative min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" alt="Интерьер кофейни рядом с зоной посадки" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-coffee-900/35 to-coffee-900/10"></div>
+                        <div class="absolute bottom-8 left-8 right-8 rounded-3xl bg-white/90 backdrop-blur-sm p-6 shadow-lg">
+                            <p class="text-sm uppercase tracking-[0.24em] text-coffee-500 mb-3">Ваш визит</p>
+                            <h3 class="font-serif text-3xl font-bold text-coffee-900 mb-3">Кофе, десерт и пауза без лишней суеты</h3>
+                            <p class="text-coffee-700 leading-relaxed">Забегайте за кофе навынос, оставайтесь на завтрак или встречайтесь с друзьями в уютной кофейне в центре Москвы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-coffee-900 text-coffee-200 py-12 border-t border-coffee-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="font-serif text-2xl font-bold text-white tracking-wide inline-block">
+                    Два пончика <span class="text-coffee-500">&</span> чашка кофе
                 </span>
-                <p class="text-sm mt-2 text-coffee-400">© 2023 Все права защищены.</p>
+                <p class="text-sm mt-2 text-coffee-400">© 2026 Кофейня в центре Москвы. Все права защищены.</p>
             </div>
             <div class="flex space-x-6 text-sm">
-                <a href="#" class="hover:text-white transition-colors footer-link">Политика конфиденциальности</a>
-                <a href="#" class="hover:text-white transition-colors footer-link">Условия использования</a>
+                <a href="#" class="hover:text-white transition-colors">Политика конфиденциальности</a>
+                <a href="#" class="hover:text-white transition-colors">Условия использования</a>
             </div>
-       </div>
-   </footer>
+        </div>
+    </footer>
 
-   <script>
-       // Navbar Scroll Effect
-       const navbar = document.getElementById('navbar');
-       window.addEventListener('scroll', () => {
-           if (window.scrollY > 50) {
-               navbar.classList.remove('bg-transparent', 'py-4');
-               navbar.classList.add('bg-coffee-50/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-           } else {
-               navbar.classList.add('bg-transparent', 'py-4');
-               navbar.classList.remove('bg-coffee-50/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
-           }
-       });
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('bg-coffee-50/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-coffee-50/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+            }
+        });
 
-       // Mobile Menu Toggle
-       const btn = document.getElementById('mobile-menu-btn');
-       const menu = document.getElementById('mobile-menu');
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
 
-       btn.addEventListener('click', () => {
-           menu.classList.toggle('hidden');
-       });
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
 
-       // Close mobile menu when clicking a link
-       menu.querySelectorAll('a').forEach(link => {
-           link.addEventListener('click', () => {
-               menu.classList.add('hidden');
-           });
-       });
+        menu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
 
-       // Scroll Reveal Animation
-       const revealElements = document.querySelectorAll('.reveal');
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
 
-       const revealOnScroll = () => {
-           const windowHeight = window.innerHeight;
-           const elementVisible = 100;
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
 
-           revealElements.forEach((reveal) => {
-               const elementTop = reveal.getBoundingClientRect().top;
-               if (elementTop < windowHeight - elementVisible) {
-                   reveal.classList.add('active');
-               }
-           });
-       };
-
-       window.addEventListener('scroll', revealOnScroll);
-       // Trigger once on load
-       revealOnScroll();
-   </script>
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
 </body>
 </html>
